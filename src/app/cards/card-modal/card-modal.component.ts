@@ -46,7 +46,7 @@ export class CardModalComponent implements OnInit {
         });
         this.dialogRef.close();
         this.CardService.getCards();
-        
+
 
       });
   }
@@ -61,10 +61,28 @@ export class CardModalComponent implements OnInit {
 
         this.dialogRef.close();
         this.CardService.getCards();
-      })
+      });
+
 
 
   }
 
+  deleteCard() {
+    this.CardService.deleteCard(this.data.id)
+    .subscribe((res:any)=>{
+      
+      this._snackBar.open(res || 'kartvizit başarıyla güncellendi.', '', {
+        duration: 4000,
+      });
+
+      this.dialogRef.close();
+      this.CardService.getCards();
+
+    });
+  }
+
 
 }
+
+
+

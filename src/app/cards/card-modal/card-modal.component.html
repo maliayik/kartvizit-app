@@ -25,12 +25,13 @@
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <div>
+  <div class="flex-grow-1 text-start" *ngIf="data">
+    <button mat-stroked-button color="warn" (click)="deleteCard()">Sil</button>
 
   </div>
   <div>
     <button mat-button mat-dialog-close>Vazgeç</button>
-    <button mat-button color="primary" (click)="data ? updateCard(): addCard()">{{data? 'Düzenle':'Ekle'}}</button>
+    <button mat-flat-button color="primary" (click)="data ? updateCard(): addCard()">{{data? 'Düzenle':'Ekle'}}</button>
   </div>
 
 </mat-dialog-actions>
