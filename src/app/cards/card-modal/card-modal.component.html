@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>Yeni Kartvizit</h2>
+<h2 mat-dialog-title>{{data? 'Kartviziti Düzenle':'Yeni Kartvizit'}}</h2>
 <mat-dialog-content class="mat-typography">
   <form [formGroup]="cardForm">
     <mat-form-field class="example-full-width">
@@ -25,6 +25,12 @@
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Vazgeç</button>
-  <button mat-button (click)="addCard()">Ekle</button>
+  <div>
+
+  </div>
+  <div>
+    <button mat-button mat-dialog-close>Vazgeç</button>
+    <button mat-button color="primary" (click)="data ? updateCard(): addCard()">{{data? 'Düzenle':'Ekle'}}</button>
+  </div>
+
 </mat-dialog-actions>
