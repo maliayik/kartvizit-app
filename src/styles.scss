@@ -25,14 +25,14 @@ main {
 
 }
 
-.mat-snack-bar-container {
-    &.succes {
-        color: #fff;
+.mat-snack-bar-container{
+    color: #fff;
+    &.succes {        
         background-color: #198754;
     }
 
-    &.error {
-        color: #fff;
+    &.error {        
         background-color: #dc3545;
     }
 }
+
