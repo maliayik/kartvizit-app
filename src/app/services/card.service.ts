@@ -9,6 +9,7 @@ import { Card } from '../models/card';
 export class CardService {
 
   cards!: Card[];
+  filteredCards!:Card[];
 
 
   constructor(
@@ -21,6 +22,7 @@ export class CardService {
     this.http.get<Card[]>(this.apiUrl + '/cards')
       .subscribe((res: Card[]) => {
         this.cards = res;
+        this.filteredCards=res;
       });
   }
 
