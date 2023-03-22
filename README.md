@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run  https://adorable-halva-d3ffa9.netlify.app/
+To run the project ->>  https://adorable-halva-d3ffa9.netlify.app/
 
 ## Code scaffolding
 
